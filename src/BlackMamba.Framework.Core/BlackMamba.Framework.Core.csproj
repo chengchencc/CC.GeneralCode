@@ -77,6 +77,7 @@
     <Compile Include="Helper\BytesHelper.cs" />
     <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="Helper\HttpHelper.cs" />
+    <Compile Include="Helper\NetworkHelper.cs" />
     <Compile Include="Helper\RegexHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="IRequestRepository.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Compile\RegistryModeFactory.cs" />
     <Compile Include="ResultCode.cs" />
     <Compile Include="Security\AppSignatureRepository.cs" />
+    <Compile Include="Security\RSASignature.cs" />
     <Compile Include="Security\ISignature.cs" />
     <Compile Include="Security\IUrlSignature.cs" />
     <Compile Include="Security\MD5Signature.cs" />

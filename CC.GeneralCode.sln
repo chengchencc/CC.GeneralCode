@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackMamba.Framework.UwpInf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackMamba.Framework.RedisMapper", "src\BlackMamba.Framework.RedisMapper\BlackMamba.Framework.RedisMapper.csproj", "{E3F95DFF-1613-4AA2-B26B-479A7650AAF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.GeneralCode.Test", "src\CC.GeneralCode.Test\CC.GeneralCode.Test.csproj", "{30604E10-A403-48AB-8824-472AF2869F5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,30 @@ Global
 		{E3F95DFF-1613-4AA2-B26B-479A7650AAF4}.Release|x64.Build.0 = Release|Any CPU
 		{E3F95DFF-1613-4AA2-B26B-479A7650AAF4}.Release|x86.ActiveCfg = Release|Any CPU
 		{E3F95DFF-1613-4AA2-B26B-479A7650AAF4}.Release|x86.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|x64.Build.0 = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Debug|x86.Build.0 = Debug|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|Any CPU.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|Any CPU.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|ARM.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|ARM.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|x64.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|x64.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|x86.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Live|x86.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|ARM.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|x64.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|x64.Build.0 = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|x86.ActiveCfg = Release|Any CPU
+		{30604E10-A403-48AB-8824-472AF2869F5E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
