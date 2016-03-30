@@ -135,5 +135,31 @@ namespace BlackMamba.Framework.UwpInfra
 
             return storyboard;
         }
+
+        public static Storyboard GetStoryboard(this DependencyObject target, string property, double from, double to, double duration = 250, EasingFunctionBase easingFunction = null)
+        {
+            var storyboard = new Storyboard();
+            var animation = new DoubleAnimation
+            {
+                From = from,
+                To = to,
+                Duration = TimeSpan.FromMilliseconds(duration),
+                EasingFunction = easingFunction ?? new SineEase(),
+                FillBehavior = FillBehavior.HoldEnd,
+                EnableDependentAnimation = true
+            };
+
+            Storyboard.SetTarget(animation, target);
+            Storyboard.SetTargetProperty(animation, property);
+
+            storyboard.Children.Add(animation);
+            storyboard.FillBehavior = FillBehavior.HoldEnd;
+            //storyboard.Begin();
+
+            return storyboard;
+        }
+
+
+
     }
 }
