@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\ImageSourceConverter.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Converters\BoolToSizeConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
