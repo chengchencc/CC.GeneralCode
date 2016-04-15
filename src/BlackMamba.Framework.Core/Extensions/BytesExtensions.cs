@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CC.Product.Core.Extensions
+namespace BlackMamba.Framework.Core
 {
     public static class BytesExtensions
     {

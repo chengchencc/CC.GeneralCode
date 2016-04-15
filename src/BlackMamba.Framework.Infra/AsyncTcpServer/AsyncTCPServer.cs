@@ -162,25 +162,45 @@ namespace BlackMamba.Framework.Infra.AsyncTcpServer
         {
             if (IsRunning)
             {
-                //TcpListener tcpListener = (TcpListener)ar.AsyncState;
+                try
+                {
+
+
+                    //TcpListener tcpListener = (TcpListener)ar.AsyncState;
+                    Log.LogHelper.WriteInfo("enter HandleTcpClientAccepted");
+                //Log.LogHelper.WriteInfo(ar.);
 
                 TcpClient client = _listener.EndAcceptTcpClient(ar);
+
+
                 byte[] buffer = new byte[client.ReceiveBufferSize];
 
-                TCPClientState state
-                  = new TCPClientState(client, buffer);
+                TCPClientState state = new TCPClientState(client, buffer);
                 lock (_clients)
                 {
                     _clients.Add(state);
                     RaiseClientConnected(state);
+                    Log.LogHelper.WriteInfo("RaiseClientConnected complete");
+
                 }
 
                 NetworkStream stream = state.NetworkStream;
                 //开始异步读取数据
+                Log.LogHelper.WriteInfo("BeginRead start");
                 stream.BeginRead(state.Buffer, 0, state.Buffer.Length, HandleDataReceived, state);
+                Log.LogHelper.WriteInfo("BeginRead complete");
 
-                _listener.BeginAcceptTcpClient(
-                  new AsyncCallback(HandleTcpClientAccepted), ar.AsyncState);
+               
+                }
+                catch (Exception ex)
+                {
+                    Log.LogHelper.WriteError(ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    _listener.BeginAcceptTcpClient(
+                        new AsyncCallback(HandleTcpClientAccepted), ar.AsyncState);
+                }
             }
         }
         /// <summary>
@@ -191,6 +211,8 @@ namespace BlackMamba.Framework.Infra.AsyncTcpServer
         {
             if (IsRunning)
             {
+                Log.LogHelper.WriteInfo("enter HandleDataReceived");
+
                 TCPClientState state = (TCPClientState)ar.AsyncState;
                 NetworkStream stream = state.NetworkStream;
 

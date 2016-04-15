@@ -272,7 +272,7 @@ namespace BlackMamba.Framework.Core
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public static byte[] ToBytes(this string str)
+        public static byte[] ToBytesUTF8(this string str)
         {
             if (str == null) return null;
 
