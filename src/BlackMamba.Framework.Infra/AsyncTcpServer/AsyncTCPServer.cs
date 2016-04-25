@@ -167,7 +167,7 @@ namespace BlackMamba.Framework.Infra.AsyncTcpServer
 
 
                     //TcpListener tcpListener = (TcpListener)ar.AsyncState;
-                    Log.LogHelper.WriteInfo("enter HandleTcpClientAccepted");
+                    //Log.LogHelper.WriteInfo("enter HandleTcpClientAccepted");
                 //Log.LogHelper.WriteInfo(ar.);
 
                 TcpClient client = _listener.EndAcceptTcpClient(ar);
@@ -180,15 +180,15 @@ namespace BlackMamba.Framework.Infra.AsyncTcpServer
                 {
                     _clients.Add(state);
                     RaiseClientConnected(state);
-                    Log.LogHelper.WriteInfo("RaiseClientConnected complete");
+                    //Log.LogHelper.WriteInfo("RaiseClientConnected complete");
 
                 }
 
                 NetworkStream stream = state.NetworkStream;
                 //开始异步读取数据
-                Log.LogHelper.WriteInfo("BeginRead start");
+                //Log.LogHelper.WriteInfo("BeginRead start");
                 stream.BeginRead(state.Buffer, 0, state.Buffer.Length, HandleDataReceived, state);
-                Log.LogHelper.WriteInfo("BeginRead complete");
+                //Log.LogHelper.WriteInfo("BeginRead complete");
 
                
                 }
@@ -211,7 +211,7 @@ namespace BlackMamba.Framework.Infra.AsyncTcpServer
         {
             if (IsRunning)
             {
-                Log.LogHelper.WriteInfo("enter HandleDataReceived");
+                //Log.LogHelper.WriteInfo("enter HandleDataReceived");
 
                 TCPClientState state = (TCPClientState)ar.AsyncState;
                 NetworkStream stream = state.NetworkStream;
@@ -268,13 +268,13 @@ namespace BlackMamba.Framework.Infra.AsyncTcpServer
         public void Send(TcpClient client, byte[] data)
         {
             if (!IsRunning)
-                throw new InvalidProgramException("This TCP Scoket server has not been started.");
+                throw new InvalidProgramException("发送失败：This TCP Scoket server has not been started.");
 
             if (client == null)
-                throw new ArgumentNullException("client");
+                throw new ArgumentNullException("发送失败：client为null");
 
             if (data == null)
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException("发送失败：data为null");
             var state = new KeyValuePair<TcpClient, byte[]>(client,data);
             client.GetStream().BeginWrite(data, 0, data.Length, SendDataEnd, state);
         }

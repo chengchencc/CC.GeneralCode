@@ -28,5 +28,17 @@ namespace BlackMamba.Framework.Infra.Log
             Console.ForegroundColor = oldColor;
 
         }
+
+        public static void WriteWarn(string content)
+        {
+            //var oldColor = Console.ForegroundColor;
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine(content);
+
+            LogManager.GetLogger("WarnLogger").Warn(content);
+            //Console.ForegroundColor = oldColor;
+
+        }
+
     }
 }
