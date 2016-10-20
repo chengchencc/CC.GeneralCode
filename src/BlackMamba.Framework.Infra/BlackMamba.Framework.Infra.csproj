@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\keys\core.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLog">
       <HintPath>..\..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
@@ -57,6 +63,9 @@
     <Compile Include="ValidateCode\ValidateCodeUtil.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\keys\core.snk">
+      <Link>core.snk</Link>
+    </None>
     <None Include="Log\NLog.config" />
     <None Include="Log\NLog.xsd">
       <SubType>Designer</SubType>
