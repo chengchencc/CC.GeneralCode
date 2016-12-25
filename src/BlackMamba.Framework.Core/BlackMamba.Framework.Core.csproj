@@ -88,6 +88,7 @@
     <Compile Include="Compile\RegistryMode.cs" />
     <Compile Include="Compile\RegistryModeFactory.cs" />
     <Compile Include="ResultCode.cs" />
+    <Compile Include="Retry.cs" />
     <Compile Include="Security\AppSignatureRepository.cs" />
     <Compile Include="Security\RSASignature.cs" />
     <Compile Include="Security\ISignature.cs" />
